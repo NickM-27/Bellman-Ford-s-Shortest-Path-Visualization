@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="cost"
+            type="Integer" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_circle"
+            android:padding="8dp"
+            android:text="@string/vertex_start"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/edge_1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="46dp"
+            android:background="@drawable/background_edge_1"
+            android:text="@string/price_1"
+            app:layout_constraintBottom_toTopOf="@+id/start"
+            app:layout_constraintLeft_toLeftOf="@+id/start"
+            app:layout_constraintRight_toRightOf="@+id/plan_1"
+            app:layout_constraintTop_toTopOf="@+id/plan_1" />
+
+        <TextView
+            android:id="@+id/edge_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/background_edge_2"
+            android:gravity="bottom"
+            android:text="@string/price_2"
+            app:layout_constraintBottom_toBottomOf="@+id/plan_2"
+            app:layout_constraintLeft_toRightOf="@+id/start"
+            app:layout_constraintRight_toLeftOf="@+id/plan_2"
+            app:layout_constraintTop_toTopOf="@+id/start" />
+
+        <TextView
+            android:id="@+id/plan_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_circle"
+            android:padding="8dp"
+            android:text="@string/vertex_plan_1"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/start"
+            app:layout_constraintCircle="@+id/start"
+            app:layout_constraintCircleAngle="60"
+            app:layout_constraintCircleRadius="100dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/edge_3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/background_edge_3"
+            android:gravity="center_vertical|end"
+            android:text="@string/price_3"
+            app:layout_constraintBottom_toBottomOf="@+id/plan_3"
+            app:layout_constraintLeft_toLeftOf="@+id/plan_1"
+            app:layout_constraintRight_toRightOf="@+id/plan_3"
+            app:layout_constraintTop_toTopOf="@+id/plan_1" />
+
+        <TextView
+            android:id="@+id/plan_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_circle"
+            android:padding="8dp"
+            android:text="@string/vertex_plan_2"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/start"
+            app:layout_constraintCircle="@+id/start"
+            app:layout_constraintCircleAngle="100"
+            app:layout_constraintCircleRadius="150dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/edge_4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/background_edge_2"
+            android:gravity="bottom"
+            android:text="@string/price_4"
+            app:layout_constraintBottom_toBottomOf="@+id/plan_3"
+            app:layout_constraintLeft_toRightOf="@+id/plan_2"
+            app:layout_constraintRight_toLeftOf="@+id/plan_3"
+            app:layout_constraintTop_toTopOf="@+id/plan_2" />
+
+        <TextView
+            android:id="@+id/plan_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_circle"
+            android:padding="8dp"
+            android:text="@string/vertex_plan_3"
+            android:textSize="14sp"
+            app:layout_constraintCircle="@+id/end"
+            app:layout_constraintCircleAngle="240"
+            app:layout_constraintCircleRadius="100dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/end" />
+
+        <TextView
+            android:id="@+id/edge_5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/background_edge_1"
+            android:gravity="bottom|end"
+            android:text="@string/price_5"
+            app:layout_constraintBottom_toBottomOf="@+id/plan_3"
+            app:layout_constraintLeft_toLeftOf="@+id/plan_3"
+            app:layout_constraintRight_toRightOf="@+id/end"
+            app:layout_constraintTop_toTopOf="@+id/end" />
+
+        <TextView
+            android:id="@+id/end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_circle"
+            android:padding="8dp"
+            android:text="@string/vertex_end"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/best"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@{@string/format_best(cost)}"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="@{cost == null ? View.INVISIBLE : View.VISIBLE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/plan_3"
+            tools:text="@string/format_best" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/action_explanation"
+            android:onClick="explain"
+            android:visibility="@{cost == null ? View.INVISIBLE : View.VISIBLE}"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/best" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

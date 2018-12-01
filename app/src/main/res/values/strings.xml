@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">BellmanFords</string>
+    <string name="app_name_full">Bellman Ford\'s Shortest Path Algorithm\nApplication: Monetary Flow</string>
+    <string name="by_author">By: Nick Mowen</string>
+    <string name="content_description">Content Description</string>
+    <string name="vertex_start">Start</string>
+    <string name="vertex_plan_1">Plan 1</string>
+    <string name="vertex_end">End</string>
+    <string name="vertex_plan_3">Plan 3</string>
+    <string name="price_1">-$10,000</string>
+    <string name="vertex_plan_2">Plan 2</string>
+    <string name="price_2">$5,000</string>
+    <string name="price_3">$20,000</string>
+    <string name="price_4">-$8,000</string>
+    <string name="price_5">-$12,000</string>
+    <string name="title_algorithm_simulator">Algorithm Simulator</string>
+    <string name="message_algorithm_simulator">This is a sample problem for Bellman Ford\'s Algorithm. We have a graph of possible investments to make, all with weighted monetary values. Pay attention as the investments are highlighted and compared.</string>
+    <string name="action_start">Start</string>
+    <string name="format_best">Best Investment: \$%d</string>
+    <string name="action_explanation">Explanation</string>
+    <string name="title_algorithm_explanation">Algorithm Explanation</string>
+    <string name="message_algorithm_explanation">Bellman Ford\'s Shortest Path Algorithm runs very similary to Dijsktras by creating an array of costs to get to each vertex from a starting point, and runs through finding the optimal path.</string>
+</resources>
