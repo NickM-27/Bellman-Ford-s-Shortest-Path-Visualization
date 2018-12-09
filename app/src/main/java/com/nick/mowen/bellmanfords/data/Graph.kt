@@ -1,5 +1,8 @@
 package com.nick.mowen.bellmanfords.data
 
+import androidx.annotation.Keep
+
+@Keep
 data class Graph(var vertexCount: Int, var edgeCount: Int, val edges: Array<Edge>) {
 
     constructor(vertexCount: Int, edgeCount: Int) : this(

@@ -31,11 +31,11 @@ object ShortestPath {
         }
     }
 
-    fun findShortestPath(graph: Graph, source: Int): Array<Int> {
+    fun findShortestPath(graph: Graph, source: Int): Array<Path> {
         val vertexCount = graph.vertexCount
         val edgeCount = graph.edgeCount
-        val distances = List(vertexCount) { Int.MAX_VALUE }.toTypedArray()
-        distances[source] = 0
+        val distances = List(vertexCount) { Path(Int.MAX_VALUE, "") }.toTypedArray()
+        distances[source].cost = 0
 
         for (i in 1 until vertexCount) {
             for (j in 0 until edgeCount) {
@@ -43,8 +43,10 @@ object ShortestPath {
                 val currentDest = graph.edges[j].destination
                 val currentWeight = graph.edges[j].weight
 
-                if (distances[currentSource] != Int.MAX_VALUE && distances[currentSource] + currentWeight < distances[currentDest])
-                    distances[currentDest] = distances[currentSource] + currentWeight
+                if (distances[currentSource].cost != Int.MAX_VALUE && distances[currentSource].cost + currentWeight < distances[currentDest].cost) {
+                    distances[currentDest].cost = distances[currentSource].cost + currentWeight
+                    distances[currentDest].name = "$currentSource -> $currentDest"
+                }
             }
         }
 
