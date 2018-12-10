@@ -10,7 +10,7 @@ object ShortestPath {
         val distances = List(vertexCount) { Int.MAX_VALUE }.toTypedArray()
         distances[source] = 0
 
-        for (i in 1 until vertexCount) {
+        for (i in 0 until vertexCount) {
             onObserve(distances, i, true)
 
             for (j in 0 until edgeCount) {
@@ -37,7 +37,7 @@ object ShortestPath {
         val distances = List(vertexCount) { Path(Int.MAX_VALUE, "") }.toTypedArray()
         distances[source].cost = 0
 
-        for (i in 1 until vertexCount) {
+        for (i in 0 until vertexCount) {
             for (j in 0 until edgeCount) {
                 val currentSource = graph.edges[j].source
                 val currentDest = graph.edges[j].destination

@@ -19,5 +19,5 @@
     <string name="format_best">Best Investment: \$%d</string>
     <string name="action_explanation">Explanation</string>
     <string name="title_algorithm_explanation">Algorithm Explanation</string>
-    <string name="message_algorithm_explanation">Bellman Ford\'s Shortest Path Algorithm runs very similary to Dijsktras by creating an array of costs to get to each vertex from a starting point, and runs through finding the optimal path.</string>
+    <string name="message_algorithm_explanation">Bellman Ford\'s Shortest Path Algorithm runs very similarly to Dijkstra\'s by creating an array of costs to get to each vertex from a starting point, and runs through finding the optimal path.</string>
 </resources>

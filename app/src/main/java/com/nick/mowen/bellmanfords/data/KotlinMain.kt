@@ -75,6 +75,6 @@ object KotlinMain {
         } while (choice < 4)
     }
 
-    private fun ArrayList<Graph.Edge>.getVertexCount(): Int =
-        this.distinctBy { it.source }.size + this.distinctBy { it.destination }.size
+    private fun ArrayList<Graph.Edge>.getVertexCount() =
+        (this.map { it.source } + this.map { it.destination }).distinct().size
 }
